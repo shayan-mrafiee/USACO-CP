@@ -1,0 +1,132 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+struct Cow {
+    int i, j;
+    
+    bool operator<(const Cow &other) const {
+        return i < other.i;
+    }
+};
+
+int main() {
+    freopen("input.in", "r", stdin);
+    
+    int N, M;
+    cin >> N >> M;
+    vector<string> pasture(N);
+    for (string &s : pasture)
+        cin >> s;
+    
+    int ans = 0;
+    map<pair<Cow, Cow>, bool> are_friends;
+    
+    // CGC
+    for (int i = 0; i < N; i++) {
+        for (int j = 0; j < M-2; j++) {
+            string s = pasture[i].substr(j, 3);
+            Cow c1; c1.i = i; c1.j = j;
+            Cow c2; c2.i = i; c2.j = j+2;
+            if (!are_friends[{c1, c2}] && !are_friends[{c2, c1}] && s == "CGC") {
+                ans++;
+                are_friends[{c1, c2}] = are_friends[{c2, c1}] = true;
+                pasture[i][j+1] = '.';
+            }
+        }
+    }
+    
+    /* C
+       G
+       C*/
+    for (int i = 0; i < N-2; i++) {
+        for (int j = 0; j < M; j++) {
+            string s = "";
+            s.push_back(pasture[i][j]);
+            s.push_back(pasture[i+1][j]);
+            s.push_back(pasture[i+2][j]);
+            
+            Cow c1; c1.i = i; c1.j = j;
+            Cow c2; c2.i = i+2; c2.j = j;
+            if (!are_friends[{c1, c2}] && !are_friends[{c2, c1}] && s == "CGC") {
+                ans++;
+                are_friends[{c1, c2}] = are_friends[{c2, c1}] = true;
+                pasture[i+1][j] = '.';
+            }
+        }
+    }
+    
+    // 7
+    for (int i = 0; i < N-1; i++) {
+        for (int j = 1; j < M; j++) {
+            string s = "";
+            s.push_back(pasture[i][j-1]);
+            s.push_back(pasture[i][j]);
+            s.push_back(pasture[i+1][j]);
+            
+            Cow c1; c1.i = i; c1.j = j-1;
+            Cow c2; c2.i = i+1; c2.j = j;
+            if (!are_friends[{c1, c2}] && !are_friends[{c2, c1}] && s == "CGC") {
+                ans++;
+                are_friends[{c1, c2}] = are_friends[{c2, c1}] = true;
+                pasture[i][j] = '.';
+            }
+        }
+    }
+    
+    // T
+    for (int i = 0; i < N-1; i++) {
+        for (int j = 0; j < M-1; j++) {
+            string s = "";
+            s.push_back(pasture[i][j+1]);
+            s.push_back(pasture[i][j]);
+            s.push_back(pasture[i+1][j]);
+            
+            Cow c1; c1.i = i; c1.j = j+1;
+            Cow c2; c2.i = i+1; c2.j = j;
+            if (!are_friends[{c1, c2}] && !are_friends[{c2, c1}] && s == "CGC") {
+                ans++;
+                are_friends[{c1, c2}] = are_friends[{c2, c1}] = true;
+                pasture[i][j] = '.';
+            }
+        }
+    }
+    
+    // _|
+    for (int i = 1; i < N; i++) {
+        for (int j = 1; j < M; j++) {
+            string s = "";
+            s.push_back(pasture[i-1][j]);
+            s.push_back(pasture[i][j]);
+            s.push_back(pasture[i][j-1]);
+            
+            Cow c1; c1.i = i-1; c1.j = j;
+            Cow c2; c2.i = i; c2.j = j-1;
+            if (!are_friends[{c1, c2}] && !are_friends[{c2, c1}] && s == "CGC") {
+                ans++;
+                are_friends[{c1, c2}] = are_friends[{c2, c1}] = true;
+                pasture[i][j] = '.';
+            }
+        }
+    }
+    
+    // L
+    for (int i = 1; i < N; i++) {
+        for (int j = 0; j < M-1; j++) {
+            string s = "";
+            s.push_back(pasture[i-1][j]);
+            s.push_back(pasture[i][j]);
+            s.push_back(pasture[i][j+1]);
+            
+            Cow c1; c1.i = i-1; c1.j = j;
+            Cow c2; c2.i = i; c2.j = j+1;
+            if (!are_friends[{c1, c2}] && !are_friends[{c2, c1}] && s == "CGC") {
+                ans++;
+                are_friends[{c1, c2}] = are_friends[{c2, c1}] = true;
+                pasture[i][j] = '.';
+            }
+        }
+    }
+    
+    cout << ans << endl;
+}
