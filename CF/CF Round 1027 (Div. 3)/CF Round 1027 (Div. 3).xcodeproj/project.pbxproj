@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXCopyFilesBuildPhase section */
-		E45B19AB2D5630E300CC45B2 /* CopyFiles */ = {
+		E413F5712DE4B06400852533 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -19,19 +19,19 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		E45B19AD2D5630E300CC45B2 /* Prefix Sums */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Prefix Sums"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E413F5732DE4B06400852533 /* CF Round 1027 (Div. 3) */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "CF Round 1027 (Div. 3)"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		E45B19AF2D5630E300CC45B2 /* Prefix Sums */ = {
+		E413F5752DE4B06400852533 /* CF Round 1027 (Div. 3) */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "Prefix Sums";
+			path = "CF Round 1027 (Div. 3)";
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		E45B19AA2D5630E300CC45B2 /* Frameworks */ = {
+		E413F5702DE4B06400852533 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,18 +41,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		E45B19A42D5630E300CC45B2 = {
+		E413F56A2DE4B06400852533 = {
 			isa = PBXGroup;
 			children = (
-				E45B19AF2D5630E300CC45B2 /* Prefix Sums */,
-				E45B19AE2D5630E300CC45B2 /* Products */,
+				E413F5752DE4B06400852533 /* CF Round 1027 (Div. 3) */,
+				E413F5742DE4B06400852533 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		E45B19AE2D5630E300CC45B2 /* Products */ = {
+		E413F5742DE4B06400852533 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E45B19AD2D5630E300CC45B2 /* Prefix Sums */,
+				E413F5732DE4B06400852533 /* CF Round 1027 (Div. 3) */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -60,63 +60,63 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E45B19AC2D5630E300CC45B2 /* Prefix Sums */ = {
+		E413F5722DE4B06400852533 /* CF Round 1027 (Div. 3) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E45B19B42D5630E300CC45B2 /* Build configuration list for PBXNativeTarget "Prefix Sums" */;
+			buildConfigurationList = E413F57A2DE4B06400852533 /* Build configuration list for PBXNativeTarget "CF Round 1027 (Div. 3)" */;
 			buildPhases = (
-				E45B19A92D5630E300CC45B2 /* Sources */,
-				E45B19AA2D5630E300CC45B2 /* Frameworks */,
-				E45B19AB2D5630E300CC45B2 /* CopyFiles */,
+				E413F56F2DE4B06400852533 /* Sources */,
+				E413F5702DE4B06400852533 /* Frameworks */,
+				E413F5712DE4B06400852533 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				E45B19AF2D5630E300CC45B2 /* Prefix Sums */,
+				E413F5752DE4B06400852533 /* CF Round 1027 (Div. 3) */,
 			);
-			name = "Prefix Sums";
+			name = "CF Round 1027 (Div. 3)";
 			packageProductDependencies = (
 			);
-			productName = "Prefix Sums";
-			productReference = E45B19AD2D5630E300CC45B2 /* Prefix Sums */;
+			productName = "CF Round 1027 (Div. 3)";
+			productReference = E413F5732DE4B06400852533 /* CF Round 1027 (Div. 3) */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		E45B19A52D5630E300CC45B2 /* Project object */ = {
+		E413F56B2DE4B06400852533 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastUpgradeCheck = 1630;
 				TargetAttributes = {
-					E45B19AC2D5630E300CC45B2 = {
-						CreatedOnToolsVersion = 16.2;
+					E413F5722DE4B06400852533 = {
+						CreatedOnToolsVersion = 16.3;
 					};
 				};
 			};
-			buildConfigurationList = E45B19A82D5630E300CC45B2 /* Build configuration list for PBXProject "Prefix Sums" */;
+			buildConfigurationList = E413F56E2DE4B06400852533 /* Build configuration list for PBXProject "CF Round 1027 (Div. 3)" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = E45B19A42D5630E300CC45B2;
+			mainGroup = E413F56A2DE4B06400852533;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = E45B19AE2D5630E300CC45B2 /* Products */;
+			productRefGroup = E413F5742DE4B06400852533 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E45B19AC2D5630E300CC45B2 /* Prefix Sums */,
+				E413F5722DE4B06400852533 /* CF Round 1027 (Div. 3) */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		E45B19A92D5630E300CC45B2 /* Sources */ = {
+		E413F56F2DE4B06400852533 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -126,7 +126,7 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		E45B19B22D5630E300CC45B2 /* Debug */ = {
+		E413F5782DE4B06400852533 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -160,7 +160,6 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -180,7 +179,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				MACOSX_DEPLOYMENT_TARGET = 15.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -188,7 +187,7 @@
 			};
 			name = Debug;
 		};
-		E45B19B32D5630E300CC45B2 /* Release */ = {
+		E413F5792DE4B06400852533 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -222,7 +221,6 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -236,27 +234,25 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				MACOSX_DEPLOYMENT_TARGET = 15.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
 			};
 			name = Release;
 		};
-		E45B19B52D5630E300CC45B2 /* Debug */ = {
+		E413F57B2DE4B06400852533 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEAD_CODE_STRIPPING = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		E45B19B62D5630E300CC45B2 /* Release */ = {
+		E413F57C2DE4B06400852533 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEAD_CODE_STRIPPING = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -264,25 +260,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E45B19A82D5630E300CC45B2 /* Build configuration list for PBXProject "Prefix Sums" */ = {
+		E413F56E2DE4B06400852533 /* Build configuration list for PBXProject "CF Round 1027 (Div. 3)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E45B19B22D5630E300CC45B2 /* Debug */,
-				E45B19B32D5630E300CC45B2 /* Release */,
+				E413F5782DE4B06400852533 /* Debug */,
+				E413F5792DE4B06400852533 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E45B19B42D5630E300CC45B2 /* Build configuration list for PBXNativeTarget "Prefix Sums" */ = {
+		E413F57A2DE4B06400852533 /* Build configuration list for PBXNativeTarget "CF Round 1027 (Div. 3)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E45B19B52D5630E300CC45B2 /* Debug */,
-				E45B19B62D5630E300CC45B2 /* Release */,
+				E413F57B2DE4B06400852533 /* Debug */,
+				E413F57C2DE4B06400852533 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = E45B19A52D5630E300CC45B2 /* Project object */;
+	rootObject = E413F56B2DE4B06400852533 /* Project object */;
 }
