@@ -15,9 +15,9 @@ using namespace std;
 
 int main() {
 	ios::sync_with_stdio(false);
-	cin.tie(nullptr);  
+	cin.tie(nullptr);
 }
 
-After you're done, press "esc" on your keyboard and then execute the following two commands to save (:w) and close (:q) the file in terminal:
-:w
-:q
+After you're done, press "esc" on your keyboard and then execute the following two commands to save (:w!) and close (:q!) the file in terminal:
+:w!
+:q!

@@ -1,0 +1,456 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E49754652DEE44EB00ACD226 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		E47D312B2DEE467500251E45 /* USACO Dec 2022.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "USACO Dec 2022.xcodeproj"; sourceTree = "<group>"; };
+		E47D31312DEE467500251E45 /* 2022 US Open Bronze.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "2022 US Open Bronze.xcodeproj"; sourceTree = "<group>"; };
+		E47D31382DEE467500251E45 /* 2025 US Open Bronze.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "2025 US Open Bronze.xcodeproj"; sourceTree = "<group>"; };
+		E47D313F2DEE467500251E45 /* February 2023.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "February 2023.xcodeproj"; sourceTree = "<group>"; };
+		E47D31462DEE467500251E45 /* Mock Contest 1.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "Mock Contest 1.xcodeproj"; sourceTree = "<group>"; };
+		E47D314B2DEE467500251E45 /* USACO 2021 February.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "USACO 2021 February.xcodeproj"; sourceTree = "<group>"; };
+		E47D31512DEE467500251E45 /* USACO 2023 Jan.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "USACO 2023 Jan.xcodeproj"; sourceTree = "<group>"; };
+		E47D31582DEE467500251E45 /* USACO Bronze Feb 2025.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "USACO Bronze Feb 2025.xcodeproj"; sourceTree = "<group>"; };
+		E47D315E2DEE467500251E45 /* USACO Dec 2023.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "USACO Dec 2023.xcodeproj"; sourceTree = "<group>"; };
+		E47D31642DEE467500251E45 /* USACO Dec 2024.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "USACO Dec 2024.xcodeproj"; sourceTree = "<group>"; };
+		E47D316A2DEE467500251E45 /* USACO Feb 2024.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "USACO Feb 2024.xcodeproj"; sourceTree = "<group>"; };
+		E47D31702DEE467500251E45 /* USACO Jan 2025.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "USACO Jan 2025.xcodeproj"; sourceTree = "<group>"; };
+		E47D31752DEE467500251E45 /* USACO January Contest Practice.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "USACO January Contest Practice.xcodeproj"; sourceTree = "<group>"; };
+		E47D317C2DEE467500251E45 /* USACO US Open 2021.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "USACO US Open 2021.xcodeproj"; sourceTree = "<group>"; };
+		E49754672DEE44EB00ACD226 /* USACO & CP */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "USACO & CP"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		E49754692DEE44EB00ACD226 /* USACO & CP */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "USACO & CP";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E49754642DEE44EB00ACD226 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E47D31802DEE467500251E45 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E47D31822DEE467500251E45 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E47D31842DEE467500251E45 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E47D31862DEE467500251E45 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E47D31882DEE467500251E45 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E47D318A2DEE467500251E45 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E47D318C2DEE467500251E45 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E47D318E2DEE467500251E45 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E47D31902DEE467500251E45 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E47D31922DEE467500251E45 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E47D31942DEE467500251E45 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E47D31962DEE467500251E45 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E47D31982DEE467500251E45 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E47D319A2DEE467500251E45 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E497545E2DEE44EB00ACD226 = {
+			isa = PBXGroup;
+			children = (
+				E49754692DEE44EB00ACD226 /* USACO & CP */,
+				E49754682DEE44EB00ACD226 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E49754682DEE44EB00ACD226 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E49754672DEE44EB00ACD226 /* USACO & CP */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E49754662DEE44EB00ACD226 /* USACO & CP */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E497546E2DEE44EB00ACD226 /* Build configuration list for PBXNativeTarget "USACO & CP" */;
+			buildPhases = (
+				E49754632DEE44EB00ACD226 /* Sources */,
+				E49754642DEE44EB00ACD226 /* Frameworks */,
+				E49754652DEE44EB00ACD226 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				E49754692DEE44EB00ACD226 /* USACO & CP */,
+			);
+			name = "USACO & CP";
+			packageProductDependencies = (
+			);
+			productName = "USACO & CP";
+			productReference = E49754672DEE44EB00ACD226 /* USACO & CP */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E497545F2DEE44EB00ACD226 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1640;
+				TargetAttributes = {
+					E49754662DEE44EB00ACD226 = {
+						CreatedOnToolsVersion = 16.4;
+					};
+				};
+			};
+			buildConfigurationList = E49754622DEE44EB00ACD226 /* Build configuration list for PBXProject "USACO & CP" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E497545E2DEE44EB00ACD226;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = E49754682DEE44EB00ACD226 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = E47D318A2DEE467500251E45 /* Products */;
+					ProjectRef = E47D31312DEE467500251E45 /* 2022 US Open Bronze.xcodeproj */;
+				},
+				{
+					ProductGroup = E47D318C2DEE467500251E45 /* Products */;
+					ProjectRef = E47D31382DEE467500251E45 /* 2025 US Open Bronze.xcodeproj */;
+				},
+				{
+					ProductGroup = E47D31982DEE467500251E45 /* Products */;
+					ProjectRef = E47D313F2DEE467500251E45 /* February 2023.xcodeproj */;
+				},
+				{
+					ProductGroup = E47D319A2DEE467500251E45 /* Products */;
+					ProjectRef = E47D31462DEE467500251E45 /* Mock Contest 1.xcodeproj */;
+				},
+				{
+					ProductGroup = E47D31842DEE467500251E45 /* Products */;
+					ProjectRef = E47D314B2DEE467500251E45 /* USACO 2021 February.xcodeproj */;
+				},
+				{
+					ProductGroup = E47D31942DEE467500251E45 /* Products */;
+					ProjectRef = E47D31512DEE467500251E45 /* USACO 2023 Jan.xcodeproj */;
+				},
+				{
+					ProductGroup = E47D318E2DEE467500251E45 /* Products */;
+					ProjectRef = E47D31582DEE467500251E45 /* USACO Bronze Feb 2025.xcodeproj */;
+				},
+				{
+					ProductGroup = E47D31902DEE467500251E45 /* Products */;
+					ProjectRef = E47D312B2DEE467500251E45 /* USACO Dec 2022.xcodeproj */;
+				},
+				{
+					ProductGroup = E47D31962DEE467500251E45 /* Products */;
+					ProjectRef = E47D315E2DEE467500251E45 /* USACO Dec 2023.xcodeproj */;
+				},
+				{
+					ProductGroup = E47D31802DEE467500251E45 /* Products */;
+					ProjectRef = E47D31642DEE467500251E45 /* USACO Dec 2024.xcodeproj */;
+				},
+				{
+					ProductGroup = E47D31882DEE467500251E45 /* Products */;
+					ProjectRef = E47D316A2DEE467500251E45 /* USACO Feb 2024.xcodeproj */;
+				},
+				{
+					ProductGroup = E47D31822DEE467500251E45 /* Products */;
+					ProjectRef = E47D31702DEE467500251E45 /* USACO Jan 2025.xcodeproj */;
+				},
+				{
+					ProductGroup = E47D31922DEE467500251E45 /* Products */;
+					ProjectRef = E47D31752DEE467500251E45 /* USACO January Contest Practice.xcodeproj */;
+				},
+				{
+					ProductGroup = E47D31862DEE467500251E45 /* Products */;
+					ProjectRef = E47D317C2DEE467500251E45 /* USACO US Open 2021.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				E49754662DEE44EB00ACD226 /* USACO & CP */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E49754632DEE44EB00ACD226 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		E497546C2DEE44EB00ACD226 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		E497546D2DEE44EB00ACD226 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		E497546F2DEE44EB00ACD226 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				"HEADER_SEARCH_PATHS[arch=*]" = "/Users/shayan/Documents/Shayan-Documents/My-Programming/";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E49754702DEE44EB00ACD226 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = "/Users/shayan/Documents/Shayan-Documents/My-Programming/";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E49754622DEE44EB00ACD226 /* Build configuration list for PBXProject "USACO & CP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E497546C2DEE44EB00ACD226 /* Debug */,
+				E497546D2DEE44EB00ACD226 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E497546E2DEE44EB00ACD226 /* Build configuration list for PBXNativeTarget "USACO & CP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E497546F2DEE44EB00ACD226 /* Debug */,
+				E49754702DEE44EB00ACD226 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E497545F2DEE44EB00ACD226 /* Project object */;
+}

@@ -1,5 +1,7 @@
 Navigate to /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include
 
+Copy the bits folder that is included in the same folder as this file in that location. Or:
+
 Make a new folder and call it "bits" without the quotes. 
 
 Inside bits, make a new file with the ".h" extension and name it "stdc++.h" without the quotes
