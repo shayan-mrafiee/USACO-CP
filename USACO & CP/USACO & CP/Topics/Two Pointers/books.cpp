@@ -1,24 +1,25 @@
 //#include <bits/stdc++.h>
 //
 //using namespace std;
+//using ll = long long;
 //
 //int main() {
 //    int n, t; cin >> n >> t;
-//    vector<int> a (n), prefix(n+1, 0);
-//    for (int i = 0; i < n; i++) {
-//        cin >> a[i];
-//        prefix[i+1] = prefix[i] + a[i];
-//    }
-//    int i1 = 0, i2 = 1, ans = 0;
-//    while (i1 <= n && i2 <= n) {
-//        int sum = prefix[i2] - prefix[i1];
-//        if (sum > t) {
-//            i1++;
-//        } else {
-//            ans = max(ans, i2-i1);
-//            i2++;
+//    vector<int> books (n);
+//    for (int &a : books) cin >> a;
+//    
+//    int left = 0, right = 0, ans = 0;
+//    ll sum = 0;
+//    while(right < n) {
+//        sum += books[right];
+//        while (sum > t) {
+//            sum -= books[left];
+//            left++;
 //        }
+//        
+//        ans = max(ans, right - left + 1);
+//        right++;
 //    }
 //    
-//    cout << ans << endl; 
+//    cout << ans << "\n";
 //}
