@@ -1,8 +1,4 @@
-//#include <fstream>
-//#include <vector>
-//#include <algorithm>
-//#include <cmath>
-//#include <limits.h>
+//#include <bits/stdc++.h>
 //
 //using namespace std;
 //
@@ -19,7 +15,6 @@
 //    int maxBlasts = 0;
 //    for (int i = 1; i < n; i++) {
 //        bool cont = true;
-//        //cout << "testing " << bales[i] << endl;
 //        int t = 1;
 //        int b = 1;
 //        int rmin = bales[i];
@@ -27,10 +22,7 @@
 //        int nextrmin = rmin;
 //        int nextrmax = rmax;
 //        while (cont) {
-////            cout << "rmax = " << rmax << endl;
-////            cout << "rmin = " << rmin << endl;
 //            cont = false;
-//            //cout << "t = " << t << endl;
 //            int lower = find(bales.begin(), bales.end(), rmin) - bales.begin();
 //            for (int j = lower-1; j >= 0; j--) {
 //                //cout << "rmin - bales[j] = " << rmin - bales[j] << endl;
@@ -47,9 +39,7 @@
 //            }
 //            int upper = find(bales.begin(), bales.end(), rmax) - bales.begin();
 //            for (int j = upper+1; j < n; j++) {
-//                //cout << "bales[j] - rmax = " << bales[j] - rmax << endl;
 //                if (bales[j] - rmax <= t) {
-//                    //cout << "condition is met.\n";
 //                    cont = true;
 //                    b++;
 //                    nextrmax = bales[j];
@@ -59,8 +49,6 @@
 //                    break;
 //                }
 //            }
-////            cout << "nextrmin = " << nextrmin << endl;
-////            cout << "nextrmax = " << nextrmax << endl;
 //            
 //            rmin = (nextrmin == rmin) ? INT_MAX : nextrmin;
 //            rmax = (nextrmax == rmax) ? -1 : nextrmax;
@@ -69,7 +57,6 @@
 //            t++;
 //            
 //        }
-//        //cout << "b = " << b << endl;
 //        maxBlasts = max(b, maxBlasts);
 //    }
 //    cout << maxBlasts << endl; 
