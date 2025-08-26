@@ -20,7 +20,7 @@
 //int main() {
 //    int n, m; cin >> n >> m;
 //    neighbors = vector<vector<int>>(n);
-//    visited = vector<bool>(n);
+//    visited.resize(n);
 //    vector<pair<int, int>> required;
 //    for (int i = 0; i < m; i++) {
 //        int a, b;
