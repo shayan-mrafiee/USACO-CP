@@ -5,7 +5,7 @@ using ll = long long;
 #define all(x) x.begin(), x.end()
 
 struct Segment {
-    int x1, y1, x2, y2;
+    int x1, y1, x2, y2, indx;
 };
 
 struct Point {
@@ -16,7 +16,7 @@ struct Point {
     }
 };
 
-bool intersect(Segment s1, Segment s2);
+bool isect(Segment s1, Segment s2);
 
 int main() {
     ios::sync_with_stdio(false);
@@ -31,7 +31,7 @@ int main() {
     for (int i = 0; i < N; i++) {
         int x1, y1, x2, y2;
         cin >> x1 >> y1 >> x2 >> y2;
-        segments[i] = {x1, y1, x2, y2};
+        segments[i] = {x1, y1, x2, y2, i};
         points.push_back({x1, y1, i});
         points.push_back({x2, y2, i});
     }
@@ -44,6 +44,15 @@ int main() {
         ans1 = point.segIndx;
         auto it = active.find(segments[ans1]);
         if (it == active.end()) {
+            it = active.lower_bound(segments[ans1]);
+            if (it != active.end() && isect(*it, segments[ans1])) { ans2 = it->indx; break; }
+            if (it != active.begin()) {
+                it--;
+                if (isect(*it, segments[ans1])) { ans2 = it->indx; break; }
+            }
+        }
+        
+        else {
             
         }
     }
