@@ -53,7 +53,24 @@ int main() {
         }
         
         else {
-            
+            auto after = it, before = it; 
+            after++;
+            if (after != active.end() && before != active.begin()) {
+                after++; before--; 
+                if (isect(*after, *before)) {
+                    ans1 = after->indx;
+                    ans2 = before->indx; 
+                    break; 
+                }
+            }
         }
     }
+    
+    if (ans1 > ans2) swap(ans1, ans2);
+    int cnt = 0; 
+    for (int i = 0; i < N; i++) {
+        cnt += (i != ans2 && isect(segments[i], segments[ans2])); 
+    }
+    
+    cout << (cnt > 1 ? ++ans2 : ++ans1) << "\n"; 
 }
