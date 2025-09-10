@@ -16,7 +16,14 @@ struct Point {
     }
 };
 
-bool isect(Segment s1, Segment s2);
+bool isect(Segment s1, Segment s2) {
+    // x = (ma - b - nc + d)/(m-n)
+    // a = s1.x1; b = s1.y1
+    // c = s2.x1, d = s2.y1
+    double m = 1.0 * (s1.y2 - s1.y1)/(s1.x2 - s1.x1),
+    n = 1.0 * (s2.y2 - s2.y1)/(s2.x2 - s2.x1);
+    return false;
+}
 
 int main() {
     ios::sync_with_stdio(false);
@@ -31,6 +38,10 @@ int main() {
     for (int i = 0; i < N; i++) {
         int x1, y1, x2, y2;
         cin >> x1 >> y1 >> x2 >> y2;
+        if (x1 > x2) {
+            swap(x1, x2);
+            swap(y1, y2);
+        }
         segments[i] = {x1, y1, x2, y2, i};
         points.push_back({x1, y1, i});
         points.push_back({x2, y2, i});
