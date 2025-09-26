@@ -42,7 +42,14 @@ int main() {
     cows.resize(N);
     visited.resize(N);
     
-    for (auto &[a, v] : cows) cin >> a >> v;
+    for (auto &[a, v] : cows) {
+        cin >> a >> v;
+        a--; 
+    }
     
+    for (int u = 0; u < N; u++) {
+        if (!visited[u]) dfs(u); 
+    }
     
+    cout << max_moos << "\n"; 
 }
