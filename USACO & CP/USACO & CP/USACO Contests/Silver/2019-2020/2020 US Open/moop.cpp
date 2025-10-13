@@ -1,43 +1,36 @@
 //#include <bits/stdc++.h>
 //
 //using namespace std;
-//using ll = long long; 
+//using ll = long long;
 //#define all(x) x.begin(), x.end()
 //
-//vector<bool> visited;
 //vector<pair<int, int>> particles;
-//int N;
-//
-//void dfs(int u) {
-//    visited[u] = true;
-//    int xi = particles[u].first, yi = particles[u].second;
-//    
-//    for (int v = 0; v < N; v++) {
-//        if (visited[v]) continue;
-//        int &xj = particles[v].first, yj = particles[v].second;
-//        if (((xi <= xj && yi <= yj) || (xj <= xi && yj <= yi))) dfs(v);
-//    }
-//}
+//int N, ans = 0;
 //
 //int main() {
 //    ios::sync_with_stdio(false);
-//    cin.tie(nullptr); cout.tie(nullptr); 
+//    cin.tie(nullptr); cout.tie(nullptr);
 //    freopen("moop.in", "r", stdin);
 //    freopen("moop.out", "w", stdout);
 //    
 //    cin >> N;
 //    particles.resize(N);
-//    visited.resize(N);
 //    
-//    for (auto &[x, y] : particles) cin >> x >> y;
-//    
-//    int ans = 0;
-//    for (int u = 0; u < N; u++) {
-//        if (!visited[u]) {
-//            ans++;
-//            dfs(u);
-//        }
+//    for (auto &[x, y] : particles) {
+//        cin >> x >> y;
 //    }
+//    
+//    sort(all(particles));
+//    
+//    vector<int> prefix(N), suffix(N);
+//    prefix[0] = particles[0].second;
+//    suffix.back() = particles.back().second;
+//    
+//    for (int i = 1; i < N; i++) prefix[i] = min(prefix[i-1], particles[i].second);
+//    for (int i = N-2; i >= 0; i--) suffix[i] = max(suffix[i+1], particles[i].second);
+//    
+//    int ans = 1;
+//    for (int i = 0; i < N-1; i++) ans += prefix[i] > suffix[i+1];
 //    
 //    cout << ans << "\n";
 //}

@@ -8,7 +8,7 @@
 //int min_days = 0;
 //
 //void dfs(int u, int p) {
-//    min_days += (int) ceil(log2(adj[u].size()));
+//    min_days += (int) ceil(log2(adj[u].size() + 1 - (u != 0)));
 //    
 //    for (int v : adj[u]) {
 //        if (v == p) continue;
