@@ -3,7 +3,7 @@
 //using namespace std;
 //
 //map<pair<int, int>, int> neighbors;
-//map<pair<int, int>, bool> exists;
+//map<pair<int, int>, int> exists;
 //int ans = 0;
 //void add_neighbors(int x, int y);
 //
@@ -28,7 +28,7 @@
 //    
 //    skip:
 //    ans--;
-//    return {};
+//    return {-1000000, -1000000};
 //}
 //
 //void add_neighbors(int x, int y) {
@@ -36,12 +36,14 @@
 //    
 //    pair<int, int> empty = find_empty(x, y);
 //    
+//    if (empty == make_pair(-1000000, -1000000)) return;
+//    
 //    add_cow(empty.first, empty.second);
 //}
 //
 //int main() {
 //    ios::sync_with_stdio(false);
-//    cin.tie(0);
+//    cin.tie(nullptr); cout.tie(nullptr);
 //    
 //    int N; cin >> N;
 //    
