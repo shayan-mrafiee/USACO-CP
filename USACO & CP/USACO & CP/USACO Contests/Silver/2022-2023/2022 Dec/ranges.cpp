@@ -16,6 +16,7 @@ int main() {
     
     int min_pos = 0, max_pos = 0;
     for (int i = 0; i < N; i++) {
+        ans[i] = 0; 
         if (diff[0][i] == diff[0][N-1]) {
             min_pos = i;
             break;
@@ -37,5 +38,20 @@ int main() {
     }
     for (int i = min_pos+1; i < N; i++) {
         if (i == max_pos) continue; 
+        int sign = (ans[i-1] + diff[i-1][i] > diff[0][i]) ? -1 : 1;
+        ans[i] = ans[i-1] + sign * diff[i-1][i];
     }
+    
+    for (int i = 1; i < N; i++) {
+        int minimum = ans[i], maximum = ans[i]; 
+        for (int j = 1; j < N; j++) {
+            minimum = min(minimum, ans[j]); 
+            maximum = max(maximum, ans[j]); 
+            if (maximum - minimum != diff[i][j]) {
+                ans[j] = ans[j-1] + (ans[j] == ans[j-1] + diff[j-1][j]) ? -diff[j-1][j] : diff[j-1][j]; 
+            }
+        }
+    }
+    
+    for (int &i : ans) cout << i << "\n"; 
 }
