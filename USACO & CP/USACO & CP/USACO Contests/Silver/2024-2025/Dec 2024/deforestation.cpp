@@ -3,43 +3,47 @@
 //using namespace std;
 //using ll = long long;
 //#define all(x) x.begin(), x.end()
+//#define pii pair<int, int>
 //
 //struct Restriction {
-//    int l, r, t;
+//    int l, r, t, has;
 //    
 //    bool operator<(const Restriction &other) const {
-//        return l < other.l;
+//        return r < other.r;
 //    }
 //};
+//
 //
 //void solve() {
 //    int N, K; cin >> N >> K;
 //    vector<int> trees(N);
-//    vector<Restriction> restrictions(K);
+//    vector<array<ll, 4>> events; // {l, type, r, cut}
+//    // type 0 -> original tree, type -1 -> interval
 //    
-//    for (int &x : trees) cin >> x;
+//    for (int &i : trees) {
+//        cin >> i;
+//        events.push_back({i, 0, 0, 0});
+//    }
 //    sort(all(trees));
 //    
-//    for (auto &[l, r, t] : restrictions) cin >> l >> r >> t;
-//    sort(all(restrictions));
-//    
-//    map<Restriction, int> has;
-//    for (int t : trees) {
-//        for (Restriction res : restrictions) {
-//            if (t >= res.l && t <= res.r) has[res]++;
-//        }
+//    for (int i = 0; i < K; i++) {
+//        int l, r, t; cin >> l >> r >> t;
+//        int has = upper_bound(all(trees), r) - lower_bound(all(trees), l);
+//        events.push_back({l, -1, r, has - t});
 //    }
+//    sort(all(events));
 //    
 //    int ans = 0;
-//    for (int t : trees) {
-//        bool can_cut = true;
-//        for (auto &[res, amt] : has) {
-//            if (t >= res.l && t <= res.r && amt <= res.t) { can_cut = false; break; }
-//        }
-//        if (!can_cut) continue;
-//        ans++;
-//        for (auto &[res, amt] : has) {
-//            if (t >= res.l && t <= res.r) amt--; 
+//    priority_queue<pii, vector<pii>, greater<pii>> pq;
+//    for (auto [l, tp, r, cut] : events) {
+//        if (tp == -1)
+//            pq.push({ans + cut, r});
+//        else {
+//            while (!pq.empty() && pq.top().second < l) {
+//                pq.pop();
+//            }
+//            if (pq.empty() || ans < pq.top().first)
+//                ans++;
 //        }
 //    }
 //    

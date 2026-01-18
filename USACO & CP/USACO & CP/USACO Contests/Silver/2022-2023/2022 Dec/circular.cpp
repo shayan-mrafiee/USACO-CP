@@ -4,50 +4,37 @@
 //using ll = long long;
 //#define all(x) x.begin(), x.end()
 //
-//vector<int> primes[4], all_primes = {1};
-//
-//void sieve(int max) {
-//    vector<bool> is_prime(max+1, true);
-//    is_prime[0] = false;
-//    is_prime[1] = true;
-//    primes[1] = {1};
-//    for (int i = 2; i <= max; i++) {
-//        if (!is_prime[i]) continue;
-//        primes[i % 4].push_back(i);
-//        all_primes.push_back(i);
-//        for (ll j = i; j*i <= max; j++) {
-//            is_prime[i*j] = false;
-//        }
-//    }
-//}
+//const int MAX = 5000001;
+//int min_turns[MAX] = {0, 1};
+//bool is_composite[MAX] = {};
+//int max_mod4[] = {2, 1, 2, 3};
 //
 //void solve() {
 //    int N; cin >> N;
-//    int min_to_win[2] = {INT32_MAX, INT32_MAX};
-//    
+//    int ans = MAX;
 //    for (int i = 0; i < N; i++) {
 //        int a; cin >> a;
-//        
-//        int ops = 0;
-//        bool fj_wins = !(true ^ (a % 4 != 0));
-//        if (a % 4) {
-//            int target = a - *(upper_bound(all(primes[a%4]), a)-1);
-//            ops = 1 + target/2;
-//        } else ops = a/2;
-//        
-//        min_to_win[fj_wins] = min(min_to_win[fj_wins], ops);
+//        if (min_turns[a]/2 < ans/2) ans = min_turns[a];
 //    }
 //    
-//    cout << (min_to_win[1] <= min_to_win[0] ? "Farmer John\n" : "Farmer Nhoj\n");
+//    cout << (ans & 1 ? "Farmer John\n" : "Farmer Nhoj\n");
 //}
 //
 //int main() {
 //    ios::sync_with_stdio(false);
 //    cin.tie(nullptr); cout.tie(nullptr);
 //    
-//    sieve(5e6);
+//    for (int i = 2; i < MAX; i++) {
+//        if (!is_composite[i]) {
+//            for (ll j = i; j < MAX; j += i) {
+//                is_composite[j] = true;
+//            }
+//            max_mod4[i % 4] = i;
+//        }
+//        
+//        min_turns[i] = (i - max_mod4[i % 4])/2 + 1;
+//    }
 //    
 //    int T; cin >> T;
-//    while(T--)
-//        solve();
+//    while (T--) solve();
 //}

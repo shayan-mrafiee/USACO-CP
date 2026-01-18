@@ -1,8 +1,24 @@
+//#include <bits/stdc++.h>
 //
-//  maxpath.cpp
-//  USACO & CP
+//using namespace std;
+//using ll = long long;
 //
-//  Created by Shayan M. Rafiee on 1/14/26.
+//ll max_color[501];
 //
-
-#include <stdio.h>
+//void dfs(int i, int j, int )
+//
+//int main() {
+//    int N, M; cin >> N >> M;
+//    vector<vector<int>> A(N, vector<int>(M)), C = A;
+//    
+//    for (vector<int> &v : A) {
+//        for (int &i : v)
+//            cin >> i;
+//    }
+//    for (vector<int> &v : C) {
+//        for (int &i : v)
+//            cin >> i;
+//    }
+//    
+//    
+//}

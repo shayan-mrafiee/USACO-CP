@@ -1,0 +1,16 @@
+
+#include <bits/stdc++.h>
+
+using namespace std;
+using ll = long long;
+
+int main() {
+    int T; cin >> T;
+    while(T--) {
+        ll N, M, H, W; cin >> N >> M >> H >> W;
+        
+        //ll dif = abs(H - W);
+        
+        cout << ((N % H == 0 && N % W == 0 && M % H == 0 && M % W == 0 && (H - W == -1 || H - W == 1)) ? "YES\n" : "NO\n");
+    }
+}

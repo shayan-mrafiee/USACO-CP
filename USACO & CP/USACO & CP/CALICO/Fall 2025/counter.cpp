@@ -1,8 +1,20 @@
+//#include <iostream>
+//#include <cctype>
 //
-//  counter.cpp
-//  USACO & CP
+//using namespace std;
 //
-//  Created by Shayan M. Rafiee on 11/9/25.
-//
-
-#include <stdio.h>
+//int main() {
+//    freopen("p.txt", "r", stdin);
+//    int res = 0;
+//    
+//    for (int i = 0; i < 13845; i++) {
+//        string s;
+//        cin >> s;
+//        //cout << s << "\n"; 
+//        string t = s;
+//        transform(s.begin(), s.end(), s.begin(), ::toupper);
+//        res += t == s;
+//    }
+//    
+//    cout << res << "\n";
+//}

@@ -34,9 +34,10 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      customLLDBInitFile = "/Users/shayan/.lldbinit"
       launchStyle = "0"
       useCustomWorkingDirectory = "YES"
-      customWorkingDirectory = "/Users/shayan/Documents/Shayan-Documents/My-Programming/C++/USACO &amp; CP/USACO &amp; CP/USACO &amp; CP/IO files"
+      customWorkingDirectory = "/Users/shayan/Documents/Shayan-Documents/My-Programming/C++/USACO &amp; CP/USACO &amp; CP/USACO &amp; CP/IO files/Old USACO"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
@@ -44,6 +45,15 @@
       viewDebuggingEnabled = "No"
       consoleMode = "0"
       structuredConsoleMode = "2">
+      <PreActions>
+         <ExecutionAction
+            ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
+            <ActionContent
+               title = "Run Script"
+               scriptText = "# Type a script or drag a script file from your workspace to insert its path.&#10;">
+            </ActionContent>
+         </ExecutionAction>
+      </PreActions>
       <BuildableProductRunnable
          runnableDebuggingMode = "0">
          <BuildableReference

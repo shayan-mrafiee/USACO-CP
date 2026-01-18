@@ -1,85 +1,37 @@
 //#include <bits/stdc++.h>
 //
 //using namespace std;
-//using ll = long long;
-//#define all(x) x.begin(), x.end()
 //
-//struct Query {
-//    int r, c; char t;
-//};
-//int N;
-//vector<vector<char>> grid;
-//vector<vector<int>> state;
-//vector<vector<bool>> unstable;
-//int id = 1, ans = 0;
+//vector<vector<int>> grid;
+//vector<vector<bool>> good;
+//const char dirs[] = {'L', 'R', 'U', 'D'};
+//const int dx[] = {0, 0, -1, 1};
+//const int dy[] = {-1, 1, 0, 0};
+//int goods = 0, N;
 //
-//void dfs(int r, int c, int sign = 1) {
-//    state[r][c] = id;
+//bool is_inside(int x, int y) {
+//    return x >= 0 && x < N && y >= 0 && y < N;
+//}
+//
+//bool is_good(int x, int y) {
+//    if (!is_inside(x, y)) return false; 
 //    
-//    switch (grid[r][c]) {
-//        case 'R':
-//            if (r + sign >= N || r + sign < 0) return;
-//            if (!state[r+sign][c]) dfs(r+sign, c, sign);
-//            else if (state[r+sign][c] == state[r][c]) {
-//                unstable[r][c] = true;
-//                ans++;
-//                return;
-//            }
-//            if (unstable[r+sign][c]) {
-//                unstable[r][c] = true;
-//                ans++;
-//                return;
-//            }
-//            break;
-//            
-//        case 'L':
-//            if (r - sign >= N || r - sign < 0) return;
-//            if (!state[r-sign][c]) dfs(r-sign, c, sign);
-//            else if (state[r-sign][c] == state[r][c]) {
-//                unstable[r][c] = true;
-//                ans++;
-//                return;
-//            }
-//            if (unstable[r-sign][c]) {
-//                unstable[r][c] = true;
-//                ans++;
-//                return;
-//            }
-//            break;
-//            
-//        case 'U':
-//            if (c + sign >= N || c + sign < 0) return;
-//            if (!state[r][c+sign]) dfs(r, c+sign, sign);
-//            else if (state[r][c+sign] == state[r][c]) {
-//                unstable[r][c] = true;
-//                ans++;
-//                return;
-//            }
-//            if (unstable[r][c+sign]) {
-//                unstable[r][c] = true;
-//                ans++;
-//                return;
-//            }
-//            break;
-//            
-//        case 'D':
-//            if (c - sign >= N || c - sign < 0) return;
-//            if (!state[r][c-sign]) dfs(r, c-sign, sign);
-//            else if (state[r][c-sign] == state[r][c]) {
-//                unstable[r][c] = true;
-//                ans++;
-//                return;
-//            }
-//            if (unstable[r][c-sign]) {
-//                unstable[r][c] = true;
-//                ans++;
-//                return;
-//            }
-//            break;
-//            
-//        default:
-//            break;
+//    for (int d = 0; d < 4; d++) {
+//        if (grid[x][y] != -1 && grid[x][y] != d) continue;
+//        
+//        if (!is_inside(x + dx[d], y + dy[d]) || good[x + dx[d]][y + dy[d]]) return true;
 //    }
+//    return false;
+//}
+//
+//void dfs(int x, int y) {
+//    if (!is_good(x, y) || good[x][y]) return;
+//    
+//    good[x][y] = true;
+//    goods++;
+//    
+//    for (int d = 0; d < 4; d++)
+//        dfs(x + dx[d], y + dy[d]);
 //}
 //
 //int main() {
@@ -87,14 +39,29 @@
 //    cin.tie(nullptr); cout.tie(nullptr);
 //    
 //    int Q; cin >> N >> Q;
+//    vector<tuple<int, int, char>> queries(Q);
 //    vector<int> answers(Q);
-//    vector<Query> queries(Q);
-//    grid = vector<vector<char>>(N, vector<char>(N, ' '));
-//    state = vector<vector<int>>(N, vector<int>(N));
-//    unstable = vector<vector<bool>>(N, vector<bool>(N));
+//    grid = vector<vector<int>>(N, vector<int>(N, -1));
+//    good = vector<vector<bool>>(N, vector<bool>(N));
 //    
-//    for (auto &[r, c, t] : queries) {
-//        cin >> r >> c >> t;
-//        grid[--r][--c] = t;
+//    for (auto &[x, y, c] : queries) {
+//        cin >> x >> y >> c;
+//        grid[--x][--y] = find(dirs, dirs+4, c) - dirs;
 //    }
+//    
+//    for (int i = 0; i < N; i++) {
+//        for (int j = 0; j < N; j++) {
+//            dfs(i, j);
+//        }
+//    }
+//    
+//    for (int i = Q-1; i >= 0; i--) {
+//        answers[i] = N*N - goods;
+//        
+//        auto [x, y, _] = queries[i];
+//        grid[x][y] = -1;
+//        dfs(x, y);
+//    }
+//    
+//    for (int ans : answers) cout << ans << "\n";
 //}
