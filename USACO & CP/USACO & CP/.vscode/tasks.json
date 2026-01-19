@@ -1,15 +1,15 @@
 {
-  "version": "2.0.0",
-  "tasks": [
-    {
-      "label": "Compile C++ file",
-      "type": "shell",
-      "command": "echo -n > \"${fileDirname}/output.txt\" && g++-15 -std=gnu++17 -g -O0 -Wall -DLOCAL \"${file}\" -o \"${fileDirname}/run\"",
-      "group": {
-        "kind": "build",
-        "isDefault": true
-      },
-      "problemMatcher": []
-    }
-  ]
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Compile C++ file",
+            "type": "shell",
+            "command": ": > \"${workspaceFolder}/output.txt\" && g++-15 -std=gnu++17 -g -O0 -Wall \"${file}\" -o \"${fileDirname}/run\" 2>&1 | tee \"${workspaceFolder}/output.txt\"",
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "problemMatcher": []
+        }
+    ]
 }
