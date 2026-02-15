@@ -1,0 +1,7 @@
+[
+    {
+      "directory": "${fileDirname}",
+      "command": "/opt/homebrew/bin/g++-15 -std=gnu++17 -O2 -g -Wall -I/opt/homebrew/Cellar/gcc/15.2.0/include/c++/15 -I/opt/homebrew/Cellar/gcc/15.2.0/include/c++/15/aarch64-apple-darwin25 -c ${file}",
+      "file": "${file}"
+    }
+  ]

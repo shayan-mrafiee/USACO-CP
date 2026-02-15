@@ -1,0 +1,21 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/shayan/Documents/Shayan-Documents/My-Programming/C++/USACO & CP/USACO & CP/USACO & CP/CF/CF Round 1058 (Div 2)/run'
+relocations:
+  - { offset: 0x167EA, size: 0x8, addend: 0x0, symName: __ZStL8__ioinit, symObjAddr: 0x63A58, symBinAddr: 0x100008000, symSize: 0x0 }
+  - { offset: 0x16A4A, size: 0x8, addend: 0x0, symName: __GLOBAL__sub_I_C.cpp, symObjAddr: 0x490, symBinAddr: 0x100000B20, symSize: 0x14 }
+  - { offset: 0x16A61, size: 0x8, addend: 0x0, symName: __Z41__static_initialization_and_destruction_0v, symObjAddr: 0x454, symBinAddr: 0x100000AE4, symSize: 0x3C }
+  - { offset: 0x16AAE, size: 0x8, addend: 0x0, symName: __ZNSt6bitsetILm30EE9referenceC1ERS0_m, symObjAddr: 0x3F8, symBinAddr: 0x100000A98, symSize: 0x4C }
+  - { offset: 0x16ADE, size: 0x8, addend: 0x0, symName: __ZNSt13_Sanitize_valILm30ELb1EE18_S_do_sanitize_valEy, symObjAddr: 0x3E0, symBinAddr: 0x100000A80, symSize: 0x18 }
+  - { offset: 0x16B0A, size: 0x8, addend: 0x0, symName: __ZNKSt6bitsetILm30EE9referencecvbEv, symObjAddr: 0x39C, symBinAddr: 0x100000A3C, symSize: 0x44 }
+  - { offset: 0x16B4A, size: 0x8, addend: 0x0, symName: __ZNSt6bitsetILm30EE9referenceD1Ev, symObjAddr: 0x388, symBinAddr: 0x100000A28, symSize: 0x14 }
+  - { offset: 0x16B6E, size: 0x8, addend: 0x0, symName: __ZNSt6bitsetILm30EEixEm, symObjAddr: 0x350, symBinAddr: 0x1000009F0, symSize: 0x38 }
+  - { offset: 0x16BCB, size: 0x8, addend: 0x0, symName: __ZNSt6bitsetILm30EEC1Ey, symObjAddr: 0x314, symBinAddr: 0x1000009B4, symSize: 0x3C }
+  - { offset: 0x16BFA, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x2A4, symBinAddr: 0x100000944, symSize: 0x70 }
+  - { offset: 0x16C29, size: 0x8, addend: 0x0, symName: __Z5solvev, symObjAddr: 0x1F0, symBinAddr: 0x100000890, symSize: 0xB4 }
+  - { offset: 0x16C6B, size: 0x8, addend: 0x0, symName: __Z2oki, symObjAddr: 0x7C, symBinAddr: 0x10000071C, symSize: 0x174 }
+  - { offset: 0x16CD8, size: 0x8, addend: 0x0, symName: __ZNSt12_Base_bitsetILm1EE10_M_getwordEm, symObjAddr: 0x64, symBinAddr: 0x100000704, symSize: 0x18 }
+  - { offset: 0x16D05, size: 0x8, addend: 0x0, symName: __ZNSt12_Base_bitsetILm1EE10_S_maskbitEm, symObjAddr: 0x3C, symBinAddr: 0x1000006DC, symSize: 0x28 }
+  - { offset: 0x16D2D, size: 0x8, addend: 0x0, symName: __ZNSt12_Base_bitsetILm1EE11_S_whichbitEm, symObjAddr: 0x24, symBinAddr: 0x1000006C4, symSize: 0x18 }
+  - { offset: 0x16D7E, size: 0x8, addend: 0x0, symName: __ZNSt12_Base_bitsetILm1EEC2Ey, symObjAddr: 0x0, symBinAddr: 0x1000006A0, symSize: 0x24 }
+...

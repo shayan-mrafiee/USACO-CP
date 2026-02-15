@@ -1,41 +1,41 @@
-//#include <bits/stdc++.h>
-//
-//using namespace std;
-//using ll = long long;
-//
-//void solve() {
-//    int N, K; cin >> N >> K;
-//    int a = 0, b = 0;
-//    string r; cin >> r;
-//    if (K == 1) {
-//        cout << r << "\n";
-//        return;
-//    }
-//    
-//    auto test = [&](string b) {
-//
-//        int ones = count(win.begin(), win.end(), '1');
-//        int l = 0, ri = K-1;
-//        while (ri < N) {
-//            if (ones % 2 != r[l]) return false;
-//            ones -= b[l++];
-//            ones += b[++ri];
-//        }
-//        return true;
-//    };
-//    
-//    int mn = INT32_MAX, mx = 0;
-//    for (int i = 0; i < (1 << 8); i++) {
-//        
-//    }
-//}
-//
-//int main() {
-//    ios::sync_with_stdio(0);
-//    cin.tie(nullptr); cout.tie(nullptr);
-//    
-//    int T; cin >> T;
-//    while (T--) {
-//        solve();
-//    }
-//}
+#include <bits/stdc++.h>
+
+using namespace std;
+using ll = long long;
+#define all(x) x.begin(), x.end()
+
+// b[i+K] = (b[i] + r[i] + r[i+1]) % 2
+void solve() {
+    int N, K; cin >> N >> K; 
+    string r; cin >> r; 
+    int min_dif = N; 
+    int min_ones = 0;
+    bool is_odd = false; 
+
+    for (int i = 0; i < K; i++) {
+        int ones = 0, zeros = 1; 
+        bool b = 0; 
+        for (int j = i+K; j < N; j += K) {
+            b = b ^ (r[j-K] - '0') ^ (r[j-K+1] - '0'); 
+            ones += b; zeros += !b;
+        }
+        min_ones += min(ones, zeros); 
+        min_dif = min(min_dif, abs(ones - zeros));
+        if (ones > zeros)
+            is_odd ^= 1;
+    }
+    // minimum
+    cout << min_ones + (is_odd != (r[0] - '0')) * min_dif << " ";
+
+    // maximum
+    cout << N - min_ones - (((is_odd + K) & 1) != (r[0] - '0')) * min_dif << "\n"; 
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    
+    int t; cin >> t; 
+    while(t--)
+        solve();
+}
