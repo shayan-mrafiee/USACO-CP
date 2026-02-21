@@ -1,11 +1,11 @@
 #include <bits/stdc++.h>
 
 using namespace std;
-using pii = pair<int, int>; 
+using pll = pair<int, int>; 
 
 int main() {
     int S; cin >> S; 
-    vector<pair<pii, pii>> pattern(S); 
+    vector<pair<pll, pll>> pattern(S); 
 
     for (auto &[p1, p2] : pattern) {
         auto &[x1, y1] = p1; 
@@ -16,8 +16,8 @@ int main() {
     }
 
     int N; cin >> N; 
-    set<pair<pii, pii>> shape_lines;
-    set<pii> points; 
+    set<pair<pll, pll>> shape_lines;
+    set<pll> points; 
     for (int i = 0; i < N; i++) {
         pair<int, int> p1, p2; 
         auto &[x1, y1] = p1; 
