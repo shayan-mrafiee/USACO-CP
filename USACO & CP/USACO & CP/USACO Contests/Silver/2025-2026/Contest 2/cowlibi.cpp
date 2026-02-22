@@ -74,7 +74,7 @@ int solve() {
     // b
     bool b = 0; 
     for (int i = 0; i < N; i++) {
-        if (left[p[i]-1] == 'N') b = !b;
+        b ^= (left[p[i]-1] == 'N');
         cout << "JN"[b]; 
     }
     return (cout << "\n", 0);

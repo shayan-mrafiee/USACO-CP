@@ -24,8 +24,7 @@ void solve(vector<int> &A, vector<int> &ans) {
 
         ans[i] = min(ans[i], i + best); // here i is the index, not l
 
-        ocr[A[i]]--; 
-        need += ocr[A[i]] == 0;
+        need += (--ocr[A[i]]) == 0;
     }
 }
 

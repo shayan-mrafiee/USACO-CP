@@ -32,10 +32,9 @@ void dfs(int u, pair<int, ll> node) {
                 possible = false;
                 return; 
             }
-            else {
-                is_fixed = true; 
-                fixed_x = x; 
-            }
+            
+            is_fixed = true; 
+            fixed_x = x; 
         }
     }
     else {
