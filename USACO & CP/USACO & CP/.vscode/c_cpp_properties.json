@@ -2,10 +2,10 @@
   "version": 4,
   "configurations": [
     {
-      "name": "macos-gcc-arm64",
+      "name": "macos-clang-arm64",
       "compilerPath": "/opt/homebrew/bin/g++-15",
-      "intelliSenseMode": "macos-gcc-arm64",
-      "cppStandard": "gnu++17",
+      "intelliSenseMode": "macos-clang-arm64",
+      "cppStandard": "c++17",
       "cStandard": "c17",
       "includePath": [
         "${workspaceFolder}/**"

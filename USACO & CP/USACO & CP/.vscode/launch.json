@@ -6,9 +6,7 @@
       "type": "cppdbg",
       "request": "launch",
       "program": "${fileDirname}/run",
-      "args": [
-        "2>&1"
-      ],
+      "args": [],
       "stopAtEntry": false,
       "cwd": "${fileDirname}",
       "environment": [],
@@ -27,7 +25,7 @@
         },
         {
           "description": "Redirect stderr to file",
-          "text": "settings set target.error-path ${workspaceFolder}/output.txt"
+          "text": "settings set target.error-path ${workspaceFolder}/errors.txt"
         }
       ]
     },
