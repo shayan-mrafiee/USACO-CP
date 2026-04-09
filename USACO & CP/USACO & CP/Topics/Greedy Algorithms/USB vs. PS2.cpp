@@ -1,42 +1,42 @@
-//#include <bits/stdc++.h>
-//
-//using namespace std;
-//using ll = long long; 
-//#define all(x) x.begin(), x.end()
-//
-//int main() {
-//	ios::sync_with_stdio(false);
-//	cin.tie(nullptr); cout.tie(nullptr);
-//    
-//    int a, b, c, m; cin >> a >> b >> c >> m;
-//    vector<int> USBs, PS2s;
-//    
-//    for (int i = 0; i < m; i++) {
-//        int val; string type;
-//        cin >> val >> type;
-//        if (type == "USB") USBs.push_back(val);
-//        else PS2s.push_back(val);
-//    }
-//    
-//    sort(all(USBs)); sort(all(PS2s));
-//    
-//    int equipped = 0, u = 0, p = 0;
-//    ll cost = 0;
-//    
-//    while(a-- && u < USBs.size()) {
-//        cost += USBs[u++];
-//        equipped++;
-//    }
-//    while(b-- && p < PS2s.size()) {
-//        cost += PS2s[p++];
-//        equipped++;
-//    }
-//    while(c-- && (p < PS2s.size() || u < USBs.size())) {
-//        if (p >= PS2s.size() || (u < USBs.size() && USBs[u] < PS2s[p]))
-//            cost += USBs[u++];
-//        else cost += PS2s[p++];
-//        equipped++;
-//    }
-//    
-//    cout << equipped << " " << cost << "\n";
-//}
+#include <bits/stdc++.h>
+
+using namespace std;
+using ll = long long; 
+#define all(x) x.begin(), x.end()
+
+int main() {
+    ios::sync_with_stdio(0);
+    cin.tie(0); cout.tie(0);
+
+    int a, b, c, m; 
+    cin >> a >> b >> c >> m;  
+    vector<pair<int, string>> mouses(m); 
+
+    for (auto &[cost, type] : mouses) {
+        cin >> cost >> type; 
+    }
+
+    sort(all(mouses));
+
+    ll total_cost = 0;
+    int equipped = 0; 
+    for (auto [cost, type] : mouses) {
+        if (a && type == "USB") {
+            total_cost += cost; 
+            equipped++; 
+            a--; 
+        }
+        else if (b && type == "PS/2") {
+            total_cost += cost; 
+            equipped++; 
+            b--; 
+        }
+        else if (c) {
+            total_cost += cost; 
+            equipped++;
+            c--; 
+        }
+    }
+
+    cout << equipped << ' ' << total_cost << "\n";
+}

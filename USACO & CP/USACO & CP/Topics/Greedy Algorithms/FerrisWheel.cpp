@@ -1,24 +1,38 @@
-//#include <bits/stdc++.h>
-//
-//using namespace std;
-//using ll = long long; 
-//#define all(x) x.begin(), x.end()
-//
-//int main() {
-//	ios::sync_with_stdio(false);
-//	cin.tie(nullptr); cout.tie(nullptr);
-//    
-//    int n, x; cin >> n >> x;
-//    vector<int> weights(n);
-//    for (int &p : weights) cin >> p;
-//    
-//    sort(weights.rbegin(), weights.rend());
-//    
-//    int gondolas = 0;
-//    for (int i = 0; i < weights.size(); i++) {
-//        if (weights[i] + weights.back() <= x) weights.pop_back();
-//        gondolas++;
-//    }
-//    
-//    cout << gondolas << "\n";
-//}
+#include <bits/stdc++.h>
+
+using namespace std;
+using ll = long long;
+#define all(x) x.begin(), x.end()
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    
+    int n, x; cin >> n >> x; 
+    vector<int> p(n);
+
+    for (int &i : p) cin >> i;
+
+    sort(all(p));
+
+    int ans = 0; 
+    int l = 0, r = n-1; 
+    while (l <= r) {
+        if (l == r) {
+            ans++; 
+            break; 
+        }
+        else if (p[l] + p[r] > x) {
+            ans++;
+            r--; 
+        }
+        else {
+            ans++; 
+            l++;
+            r--; 
+        }
+    }
+
+    cout << ans << "\n";
+    
+}
