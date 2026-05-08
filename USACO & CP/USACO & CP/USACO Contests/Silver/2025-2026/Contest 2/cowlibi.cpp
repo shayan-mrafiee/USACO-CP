@@ -63,7 +63,7 @@ int solve() {
         // add JN cow
         p.push_back(cows["JN"].back()); cows["JN"].pop_back();
     }
-    p.push_back(cows["NJ"].back()); cows["NJ"].pop_back();
+    p.push_back(cows["NJ"].back());
 
     output: 
     // p
@@ -73,8 +73,8 @@ int solve() {
 
     // b
     bool b = 0; 
-    for (int i = 0; i < N; i++) {
-        b ^= (left[p[i]-1] == 'N');
+    for (int i : p) {
+        b ^= (left[i-1] == 'N');
         cout << "JN"[b]; 
     }
     return (cout << "\n", 0);

@@ -1,46 +1,52 @@
 #include <bits/stdc++.h>
 
-using namespace std; 
+using namespace std;
 using ll = long long; 
 #define all(x) x.begin(), x.end()
 
-// b[i+K] = b[i] + r[i] + r[i+1] (mod 2)
-
+// r[i] = (b[i] + ... + b[i+K-1]) mod 2
+// r[i+1] = (b[i+1] + ... + b[i+K]) mod 2
+// => r[i] + r[i+1] = (b[i] + b[i+K]) mod 2 bc 2(b[i+1] + ... + b[i+K-1]) mod 2 = 0
+// => b[i+k] = (r[i] + r[i+1] + b[i]) mod 2
 void solve() {
-    int N, K; cin >> N >> K;
-    string r; cin >> r; // size = N - K + 1
-    int min_diff = N, min_ones = 0;
-    bool is_odd = 0; // keeps track of the parity of the sum of the first K elements 
-    
-    for (int i = 0; i < K; i++) {
-        int ones = 0, zeros = 1; 
-        bool b = 0; 
-        for (int j = i+K; j < N; j += K) {
-            b = b ^ (r[j-K] - '0') ^ (r[j-K+1] - '0');
-            ones += b;
-            zeros += !b;
-        }
-
-        min_ones += min(ones, zeros);
-        min_diff = min(min_diff, abs(ones - zeros));
-        is_odd ^= (ones > zeros); // if ones > zeros, means we're going to switch the current b to 1 => parrity is going to change 
+    int N, K; cin >> N >> K; 
+    vector<bool> r(N-K+1); 
+    for (int i = 0; i <= N-K; i++) {
+        char c; cin >> c; 
+        r[i] = c == '1';
     }
 
-    // if is_odd != r[0], we need to flip one b with min_diff between ones and zeros
+    int ans = 0; 
+    int min_diff = N; 
+    bool sum = 0; // b[0] + ... + b[K-1]
+    for (int i = 0; i < K; i++) {
+        int v[2] = {1, 0};
+        bool b = 0; 
+        for (int j = i+K; j < N; j += K) {
+            b = (r[j-K] + r[j-K+1] + b) % 2; 
+            v[b]++; 
+        }
 
-    // minimum
-    cout << min_ones + (is_odd != (r[0] - '0')) * min_diff << " ";
+        if (v[0] < v[1]) {
+            swap(v[0], v[1]);
+            sum ^= 1;  
+        } // v = {bigger, smaller}
+        min_diff = min(min_diff, v[0] - v[1]);
+        ans += v[1];
+    }
 
-    // maximum
-    cout << N - min_ones - (((is_odd + K) & 1) != (r[0] - '0')) * min_diff << "\n";
+    // min
+    cout << ans + (sum != r[0]) * min_diff << " "; 
+
+    // max
+    cout << N - ans - ((K - sum) % 2 != r[0]) * min_diff << "\n";
 }
 
 int main() {
     ios::sync_with_stdio(0);
-    cin.tie(0);
+    cin.tie(0); cout.tie(0);
 
-    int T; cin >> T; 
-    while (T--) {
+    int T; cin >> T;
+    while (T--)
         solve(); 
-    }
 }

@@ -1,42 +1,45 @@
-//#include <iostream>
-//#include <vector>
-//#include <stack>
-//
-//using namespace std;
-//
-//vector<bool> visited;
-//vector<vector<int>> neighbors;
-//int visitedCities = 0;
-//
-//void dfs(int node) {
-//    if (visited[node]) return;
-//    visited[node] = true;
-//    visitedCities++;
-//    for (int i : neighbors[node]) {
-//        dfs(i);
-//    }
-//}
-//
-//int main() {
-//    int n, m; cin >> n >> m;
-//    neighbors = vector<vector<int>>(n);
-//    visited.resize(n);
-//    vector<pair<int, int>> required;
-//    for (int i = 0; i < m; i++) {
-//        int a, b;
-//        cin >> a >> b;
-//        neighbors[a-1].push_back(b-1);
-//        neighbors[b-1].push_back(a-1);
-//    }
-//    
-//    for (int i = 0; i < n && visitedCities < n; i++) {
-//        dfs(i);
-//        if (i < n-1 && !visited[i+1]) required.push_back({i+1, i+2});
-//    }
-//    
-//    cout << required.size() << endl;
-//    
-//    for (pair<int, int> p : required) {
-//        cout << p.first << " " << p.second << endl;
-//    }
-//}
+#include <bits/stdc++.h>
+
+using namespace std;
+using ll = long long;
+#define all(x) x.begin(), x.end()
+
+vector<vector<int>> adj; 
+vector<vector<int>> comps; 
+vector<bool> state; 
+
+void dfs(int u) {
+    state[u] = true; 
+    comps.back().push_back(u);
+
+    for (int v : adj[u]) {
+        if (!state[v])
+            dfs(v);
+    }
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    
+    int n, m; cin >> n >> m; 
+    adj.resize(n); 
+    state.resize(n);
+    
+    while (m--) {
+        int a, b; cin >> a >> b;
+        adj[--a].push_back(--b);
+        adj[b].push_back(a);
+    }
+
+    for (int u = 0; u < n; u++) {
+        if (state[u]) continue;
+        comps.push_back({});
+        dfs(u);
+    }
+
+    cout << comps.size()-1 << "\n";
+    for (int i = 0; i < comps.size()-1; i++) {
+        cout << comps[i][0]+1 << ' ' << comps[i+1][0]+1 << "\n";
+    }
+}

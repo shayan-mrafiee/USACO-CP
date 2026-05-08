@@ -8,13 +8,13 @@ using ll = long long;
 vector<vector<pair<int, int>>> adj; 
 vector<pair<int, ll>> nodes; // (sign, base)
 vector<pair<ll, int>> ranges; 
-vector<bool> visited; 
+vector<bool> ranges; 
 vector<int> l, r; 
 bool is_fixed = false, possible = true; 
 ll fixed_x = 0; 
 
 int dfs(int u, pair<int, ll> info) {
-    if (visited[u]) {
+    if (ranges[u]) {
         if (nodes[u].first == info.first && nodes[u].second != info.second)
             impossible;
         if (nodes[u].first != info.first) {
@@ -31,7 +31,7 @@ int dfs(int u, pair<int, ll> info) {
         }
     }
     else {
-        visited[u] = true; 
+        ranges[u] = true; 
         nodes[u] = info;
 
         if (info.first == 1) {
@@ -54,7 +54,7 @@ int dfs(int u, pair<int, ll> info) {
 void initialize(int N) {
     adj.clear(); adj.resize(N);
     nodes.clear(); nodes.resize(N);
-    visited.clear(); visited.resize(N);
+    ranges.clear(); ranges.resize(N);
     l.resize(N); r.resize(N);
     possible = true; 
 }
@@ -74,7 +74,7 @@ void solve() {
     }
 
     for (int u = 0; u < N && possible; u++) {
-        if (visited[u]) continue; 
+        if (ranges[u]) continue; 
         is_fixed = false; 
         ranges.clear(); 
         dfs(u, {1, 0});
