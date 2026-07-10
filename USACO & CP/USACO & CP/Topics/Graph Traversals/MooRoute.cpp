@@ -13,13 +13,13 @@ struct Flight {
 };
 
 vector<vector<Flight>> adj; 
-vector<int> a, earliest_time; 
+vector<int> nodes, earliest_time; 
 
 void dfs(int u, int t) {
     earliest_time[u] = t; 
 
     for (auto [r, d, s] : adj[u]) {
-        if (t + a[u] > r) return; 
+        if (t + nodes[u] > r) return; 
         if (earliest_time[d] > s)
             dfs(d, s);
     }
@@ -31,7 +31,7 @@ int main() {
 
     int N, M; cin >> N >> M; 
     adj.resize(N);
-    a.resize(N);
+    nodes.resize(N);
     earliest_time = vector<int>(N, INT32_MAX);
 
     while (M--) {
@@ -41,11 +41,11 @@ int main() {
     }
 
     for (int i = 0; i < N; i++) {
-        cin >> a[i]; 
+        cin >> nodes[i]; 
         sort(all(adj[i]));
     }
 
-    dfs(0, -a[0]);
+    dfs(0, -nodes[0]);
     earliest_time[0] = 0; 
     for (int i : earliest_time) {
         cout << (i == INT32_MAX ? -1 : i) << "\n";

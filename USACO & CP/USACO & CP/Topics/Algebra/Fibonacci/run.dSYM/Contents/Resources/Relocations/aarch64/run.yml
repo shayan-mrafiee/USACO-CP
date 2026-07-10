@@ -1,0 +1,11 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/shayan/Documents/Shayan-Documents/My-Programming/C++/USACO & CP/USACO & CP/USACO & CP/Topics/Algebra/Fibonacci/run'
+relocations:
+  - { offset: 0x15E9B, size: 0x8, addend: 0x0, symName: __ZStL8__ioinit, symObjAddr: 0x61A7E, symBinAddr: 0x100008000, symSize: 0x0 }
+  - { offset: 0x15FA4, size: 0x8, addend: 0x0, symName: __ZL3MOD, symObjAddr: 0x3D4, symBinAddr: 0x100000B78, symSize: 0x0 }
+  - { offset: 0x160D8, size: 0x8, addend: 0x0, symName: __GLOBAL__sub_I_MAIN74.cpp, symObjAddr: 0x428, symBinAddr: 0x100000B00, symSize: 0x14 }
+  - { offset: 0x160EF, size: 0x8, addend: 0x0, symName: __Z41__static_initialization_and_destruction_0v, symObjAddr: 0x3EC, symBinAddr: 0x100000AC4, symSize: 0x3C }
+  - { offset: 0x1610D, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x364, symBinAddr: 0x100000A54, symSize: 0x70 }
+  - { offset: 0x1613B, size: 0x8, addend: 0x0, symName: __Z5solvev, symObjAddr: 0x0, symBinAddr: 0x1000006F0, symSize: 0x364 }
+...

@@ -7,7 +7,7 @@
             "command": ": > \"${workspaceFolder}/output.txt\" && : > \"${workspaceFolder}/errors.txt\" && g++-15 -std=gnu++17 -g -O0 -Wall \"${file}\" -o \"${fileDirname}/run\"",
             "group": {
                 "kind": "build",
-                "isDefault": false
+                "isDefault": true
             },
             "problemMatcher": []
         }

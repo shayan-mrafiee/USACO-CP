@@ -3,7 +3,7 @@
 using namespace std;
 using ll = long long; 
 
-vector<int> a;
+vector<int> nodes;
 set<int> s; 
 
 ll ceil(ll a, ll b) {
@@ -11,7 +11,7 @@ ll ceil(ll a, ll b) {
 }
 
 void update(int i) {
-    if (i && a[i] > a[i-1]) s.insert(i);
+    if (i && nodes[i] > nodes[i-1]) s.insert(i);
     else s.erase(i);
 }
 
@@ -20,9 +20,9 @@ int main() {
     cin.tie(0); cout.tie(0);
 
     int N; cin >> N; 
-    a.resize(N);
+    nodes.resize(N);
 
-    for (int &i : a) cin >> i;
+    for (int &i : nodes) cin >> i;
     for (int i = 0; i < N; i++) 
         update(i);
 
@@ -30,17 +30,17 @@ int main() {
     while (Q--) {
         int i, v; ll t;
         cin >> i >> v >> t;
-        a[--i] = v;
+        nodes[--i] = v;
         update(i);
         if (i < N-1) update(i+1);
 
-        ll x = max(t - N + 1, 0LL) / (a[0] + 1);
+        ll x = max(t - N + 1, 0LL) / (nodes[0] + 1);
         for (int i : s) {
-            int m = ceil(a[i], a[i-1]);
+            int m = ceil(nodes[i], nodes[i-1]);
             x /= m; 
             if (!x) break; 
         }
 
-        cout << a.back() * x << "\n";
+        cout << nodes.back() * x << "\n";
     }
 }
