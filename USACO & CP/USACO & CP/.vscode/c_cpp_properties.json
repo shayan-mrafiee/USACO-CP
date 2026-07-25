@@ -3,7 +3,7 @@
   "configurations": [
     {
       "name": "macos-clang-arm64",
-      "compilerPath": "/opt/homebrew/bin/g++-15",
+      "compilerPath": "/opt/homebrew/bin/g++-16",
       "intelliSenseMode": "macos-clang-arm64",
       "cppStandard": "c++17",
       "cStandard": "c17",
