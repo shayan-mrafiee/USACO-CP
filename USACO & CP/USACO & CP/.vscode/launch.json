@@ -5,7 +5,7 @@
       "name": "Run and debug active C++ file",
       "type": "cppdbg",
       "request": "launch",
-      "program": "${fileDirname}/run",
+      "program": "${workspaceFolder}/run",
       "args": [],
       "stopAtEntry": false,
       "cwd": "${fileDirname}",

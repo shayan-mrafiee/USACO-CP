@@ -4,17 +4,17 @@ using namespace std;
 using ll = long long; 
 
 vector<vector<int>> H; 
-vector<vector<vector<bool>>> ranges; 
+vector<vector<vector<bool>>> range; 
 int N, M, K, D; 
 bool possible = false; 
 
 void dfs(int i, int j, int K) {
-    if (ranges[i][j][K]) return;
+    if (range[i][j][K]) return;
 
     if (K < 0) {
         return; 
     }
-    ranges[i][j][K] = true; 
+    range[i][j][K] = true; 
     if (i == N-1 && j == M-1) {
         possible = 1; 
         return; 
@@ -46,7 +46,7 @@ void dfs(int i, int j, int K) {
 int main() {
     cin >> N >> M >> K; 
     H = vector<vector<int>>(N, vector<int>(M));
-    ranges = vector<vector<vector<bool>>>(N, vector<vector<bool>>(M, vector<bool>(K+1)));
+    range = vector<vector<vector<bool>>>(N, vector<vector<bool>>(M, vector<bool>(K+1)));
 
     for (vector<int> &v : H) {
         for (int &i : v)
@@ -56,7 +56,7 @@ int main() {
     int lo = 0, hi = 1e6; 
     int ans = hi; 
     while (lo <= hi) {
-        ranges = vector<vector<vector<bool>>>(N, vector<vector<bool>>(M, vector<bool>(K+1)));
+        range = vector<vector<vector<bool>>>(N, vector<vector<bool>>(M, vector<bool>(K+1)));
         D = lo + (hi - lo)/2; 
         possible = false; 
         dfs(0, 0, K);

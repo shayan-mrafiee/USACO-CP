@@ -8,7 +8,7 @@ using ll = long long;
 vector<vector<array<int, 2>>> adj;
 vector<short> sign; 
 vector<ll> base; 
-vector<pair<ll, int>> ranges; 
+vector<pair<ll, int>> range; 
 vector<int> l, r; 
 bool has_set_x = false, possible = true;
 ll set_x = 0; 
@@ -37,12 +37,12 @@ int dfs(int u, short s, ll b) {
     }
 
     if (s == -1) {
-        ranges.push_back({b - r[u], 1});
-        ranges.push_back({b - l[u] + 1, -1});
+        range.push_back({b - r[u], 1});
+        range.push_back({b - l[u] + 1, -1});
     }
     else {
-        ranges.push_back({l[u] - b, 1});
-        ranges.push_back({r[u] - b + 1, -1});
+        range.push_back({l[u] - b, 1});
+        range.push_back({r[u] - b + 1, -1});
     }
 
     return 0;
@@ -70,19 +70,19 @@ void solve() {
     for (int i = 0; i < N; i++) {
         if (sign[i]) continue; 
         has_set_x = false; 
-        ranges.clear(); 
+        range.clear(); 
         dfs(i, 1, 0);
         if (!possible) break; 
         
         if (has_set_x) {
-            for (auto [x, y] : ranges) {
+            for (auto [x, y] : range) {
                 ans += (set_x >= x) * y; 
             }
         }
         else {
             int cur = 0, best = 0;
-            sort(all(ranges));
-            for (auto [_, y] : ranges) {
+            sort(all(range));
+            for (auto [_, y] : range) {
                 best = max(best, cur += y);
             }
             ans += best; 

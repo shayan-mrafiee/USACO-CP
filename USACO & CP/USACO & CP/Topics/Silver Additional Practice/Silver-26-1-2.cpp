@@ -7,14 +7,14 @@ using ll = long long;
 
 vector<vector<pair<int, int>>> adj; 
 vector<pair<int, ll>> nodes; // (sign, base)
-vector<pair<ll, int>> ranges; 
-vector<bool> ranges; 
+vector<pair<ll, int>> range; 
+vector<bool> range; 
 vector<int> l, r; 
 bool is_fixed = false, possible = true; 
 ll fixed_x = 0; 
 
 int dfs(int u, pair<int, ll> info) {
-    if (ranges[u]) {
+    if (range[u]) {
         if (nodes[u].first == info.first && nodes[u].second != info.second)
             impossible;
         if (nodes[u].first != info.first) {
@@ -31,16 +31,16 @@ int dfs(int u, pair<int, ll> info) {
         }
     }
     else {
-        ranges[u] = true; 
+        range[u] = true; 
         nodes[u] = info;
 
         if (info.first == 1) {
-            ranges.push_back({l[u] - info.second, 1});
-            ranges.push_back({r[u] - info.second + 1, -1});
+            range.push_back({l[u] - info.second, 1});
+            range.push_back({r[u] - info.second + 1, -1});
         }
         else {
-            ranges.push_back({info.second - r[u], 1});
-            ranges.push_back({info.second - l[u] + 1, -1});
+            range.push_back({info.second - r[u], 1});
+            range.push_back({info.second - l[u] + 1, -1});
         }
         
         for (auto [v, z] : adj[u]) {
@@ -54,7 +54,7 @@ int dfs(int u, pair<int, ll> info) {
 void initialize(int N) {
     adj.clear(); adj.resize(N);
     nodes.clear(); nodes.resize(N);
-    ranges.clear(); ranges.resize(N);
+    range.clear(); range.resize(N);
     l.resize(N); r.resize(N);
     possible = true; 
 }
@@ -74,20 +74,20 @@ void solve() {
     }
 
     for (int u = 0; u < N && possible; u++) {
-        if (ranges[u]) continue; 
+        if (range[u]) continue; 
         is_fixed = false; 
-        ranges.clear(); 
+        range.clear(); 
         dfs(u, {1, 0});
 
         if (is_fixed) {
-            for (auto [x, y] : ranges) {
+            for (auto [x, y] : range) {
                 if (x <= fixed_x) ans += y; 
             }
         }
         else {
-            sort(all(ranges));
+            sort(all(range));
             int cur = 0, best = 0;
-            for (auto [x, y] : ranges) {
+            for (auto [x, y] : range) {
                 best = max(best, cur += y);
             }
             ans += best; 

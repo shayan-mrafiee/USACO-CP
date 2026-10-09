@@ -9,10 +9,10 @@ const int MOD = 1e9 + 7;
 vector<ll> ans; 
 vector<vector<int>> adj; 
 
-void dfs1(int u) {
+void dfs(int u) {
     ans[u] = 1; 
     for (int v : adj[u]) {
-        dfs1(v); 
+        dfs(v); 
         ans[u] += ans[v] + 1; 
         ans[u] %= MOD;
     }
@@ -39,7 +39,7 @@ void solve() {
         adj[i].push_back(--r);
     }
 
-    dfs1(0); dfs2(0);
+    dfs(0); dfs2(0);
     
     for (int i : ans) cout << i << ' ';
     cout << "\n";
